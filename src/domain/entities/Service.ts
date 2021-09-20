@@ -1,10 +1,10 @@
 export class Service {
-    id: number;
+    id?: number;
     title: string;
     description: string;
     budget: number;
     dateRegister: Date;
     dateLimit: Date;
     situation: string;
-    comment: string;
+    comments: Comment[];
 }
