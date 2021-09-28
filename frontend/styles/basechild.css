@@ -1,0 +1,16 @@
+.header-main-container {
+    justify-content: start;
+}
+
+.header-main-container img {
+    width: 128px;
+    height: 128px;
+    padding: 20px;
+    margin-left: 10px;
+}
+
+.main-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

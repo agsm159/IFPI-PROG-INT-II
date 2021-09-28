@@ -1,0 +1,6 @@
+.actions-box-container-detail-page {
+    display: flex;
+    justify-content: space-around;
+    margin: 5px 0px;
+    padding: 2px;
+}

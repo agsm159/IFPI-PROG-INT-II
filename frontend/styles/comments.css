@@ -1,0 +1,11 @@
+.show-items-comments {
+    overflow: scroll;
+    width: 300px;
+    overflow-x: hidden;
+}
+
+.button-box-container {
+    height: 30px;
+    padding: 5px;
+    margin: 20px 0px;
+}

@@ -1,0 +1,67 @@
+.header-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: x-small;
+    color: #E05D5D;
+}
+
+.icon-create-service a img {
+    width: 32px;
+    height: 32px;
+}
+
+.main-main-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 40px;
+    margin: 20px 40px;
+    grid-row-gap: 20px;
+}
+
+.service-container {
+    background-color: #FFB344;
+    border-radius: 4px;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 150%;
+    padding: 10px;
+    max-width: 200px;
+    min-width: 150px;
+    box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.2);
+}
+
+.service-container p {
+    font-size: small;
+    margin-bottom: 5px;
+    color: #111;
+    min-width: 100px;
+}
+
+.service-container a {
+    font-size: small;
+    color: #FFF8E5;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.actions-service {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.actions-service button {
+    min-width: 55px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#button-concluded {
+    background-color: rgba(0, 161, 157, 0.7)
+}
+
+#button-called-off {
+    background-color: rgba(224, 93, 93, 0.7)
+}

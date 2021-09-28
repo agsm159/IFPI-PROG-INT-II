@@ -9,18 +9,10 @@ export class FirestoreServiceRepository implements ServiceRepository {
         const servicesRef = db.collection('services');
         const servicesDoc = await servicesRef.get();
 
-
-
-        const services: Service[] = servicesDoc.docs.map(doc => ({
-            id: Number(doc.id),
-            title: doc.data().title,
-            description: doc.data().description,
-            budget: doc.data().budget,
-            dateRegister: doc.data().dateRegister,
-            dateLimit: doc.data().dateLimit,
-            situation: doc.data().situation,
-            comments: doc.data().comments,
-        }));
+        const services: Service[] = []
+        servicesDoc.forEach((doc: any) => {
+            services.push({ id: doc.id, ...doc.data() })
+        });
 
         return services as Service[];
     }
@@ -29,7 +21,7 @@ export class FirestoreServiceRepository implements ServiceRepository {
 
         const { title, description,
             budget, dateRegister, dateLimit,
-            situation, comments } = data
+            situation } = data
 
         const service = {
             title: title,
@@ -38,7 +30,6 @@ export class FirestoreServiceRepository implements ServiceRepository {
             dateRegister: dateRegister,
             dateLimit: dateLimit,
             situation: situation,
-            comments: comments
         }
 
         await db.collection('services').add(service)
@@ -46,10 +37,10 @@ export class FirestoreServiceRepository implements ServiceRepository {
         return service as Service
     }
 
-    public async update(data: any, id: string): Promise<Service> {
+    public async update(data: Service, id: string): Promise<Service> {
 
         const serviceRef = db.collection('services');
-        const serviceDoc = serviceRef.doc(data.description);
+        const serviceDoc = serviceRef.doc(id);
         const { title, description,
             budget, dateLimit } = data
 
@@ -60,6 +51,28 @@ export class FirestoreServiceRepository implements ServiceRepository {
             dateLimit: dateLimit,
         }
 
+        await serviceDoc.update({ service })
+
+        return service as Service
+    }
+
+    public async setCalledOff(id: string): Promise<Service> {
+        const serviceRef = db.collection('services');
+        const serviceDoc = serviceRef.doc(id);
+        const service = {
+            situation: 'Cancelado'
+        }
+        await serviceDoc.update({ service })
+
+        return service as Service
+    }
+
+    public async setConcluded(id: string): Promise<Service> {
+        const serviceRef = db.collection('services');
+        const serviceDoc = serviceRef.doc(id);
+        const service = {
+            situation: 'Concluído'
+        }
         await serviceDoc.update({ service })
 
         return service as Service
