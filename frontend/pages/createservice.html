@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+    <script src="../scripts/setService.js"></script>
 </head>
 
 <body>
@@ -25,13 +26,14 @@
                 <div class="box-container">
                     <p class="title-box-container">Registro de Serviços</p>
                     <form class="form-box-container">
-                        <input class="input-box-container" type="text" placeholder="Título">
-                        <input class="input-box-container" type="text" placeholder="Orçamento">
-                        <input class="input-box-container" type="text" placeholder="Data cadastro">
-                        <input class="input-box-container" type="text" placeholder="Data limite">
-                        <textarea class="input-box-container" name="" id="" cols="30" rows="10"
+                        <input class="input-box-container" id="service-title" type="text" placeholder="Título">
+                        <input class="input-box-container" id="service-budget" type="text" placeholder="Orçamento">
+                        <input class="input-box-container" id="service-dateRegister" type="text"
+                            placeholder="Data cadastro">
+                        <input class="input-box-container" id="service-dateLimit" type="text" placeholder="Data limite">
+                        <textarea class="input-box-container" id="service-description" name="" id="" cols="30" rows="10"
                             placeholder="Descrição"></textarea>
-                        <button class="button-box-container">Confirmar</button>
+                        <button class="button-box-container" id="btn-new-service">Confirmar</button>
                     </form>
                 </div>
             </div>

@@ -8,9 +8,10 @@
     <title>App Serviço</title>
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+    <script src="../scripts/getServices.js"></script>
 </head>
 
 <body>
@@ -29,54 +30,24 @@
                     </a>
                 </div>
             </div>
-            <div class="main-main-container">
-                <div class="service-container">
-                    <p>Serviço de Assar calangos</p>
-                    <p>R$ 500,00</p>
-                    <p>Registro: 27/09/2021</p>
-                    <p>Limite: 02/11/2021</p>
-                    <a href="">Ver detalhes</a>
-                    <div class="actions-service">
-                        <button id="button-concluded">Concluir</button>
-                        <button id="button-called-off">Cancelar</button>
+            <div class="main-main-container" id="main-main-container">
+                <template id="service-template">
+                    <div class="service-container">
+                        <p><span></span></p>
+                        <p><span></span> R$</p>
+                        <p>Registro: <span></span></p>
+                        <p>Limite: <span></span></p>
+                        <a href="./detail.html">Ver detalhes</a>
+                        <div class="actions-service">
+                            <button id="button-concluded">Concluir</button>
+                            <button id="button-called-off">Cancelar</button>
+                        </div>
                     </div>
-                </div>
-                <div class="service-container">
-                    <p>Serviço de Assar calangos</p>
-                    <p>R$ 500,00</p>
-                    <p>Registro: 27/09/2021</p>
-                    <p>Limite: 02/11/2021</p>
-                    <a href="">Ver detalhes</a>
-                    <div class="actions-service">
-                        <button id="button-concluded">Concluir</button>
-                        <button id="button-called-off">Cancelar</button>
-                    </div>
-                </div>
-                <div class="service-container">
-                    <p>Serviço de Assar calangos</p>
-                    <p>R$ 500,00</p>
-                    <p>Registro: 27/09/2021</p>
-                    <p>Limite: 02/11/2021</p>
-                    <a href="">Ver detalhes</a>
-                    <div class="actions-service">
-                        <button id="button-concluded">Concluir</button>
-                        <button id="button-called-off">Cancelar</button>
-                    </div>
-                </div>
-                <div class="service-container">
-                    <p>Serviço de Assar calangos</p>
-                    <p>R$ 500,00</p>
-                    <p>Registro: 27/09/2021</p>
-                    <p>Limite: 02/11/2021</p>
-                    <a href="">Ver detalhes</a>
-                    <div class="actions-service">
-                        <button id="button-concluded">Concluir</button>
-                        <button id="button-called-off">Cancelar</button>
-                    </div>
-                </div>
+                </template>
             </div>
         </div>
     </main>
+
 </body>
 
 </html>
