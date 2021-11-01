@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import useDebounce from '../scripts/_Debounce';
+import { SearchInputStyle } from '../styles/components/SearchInput';
+import { FiSearch } from 'react-icons/fi'
 
 export default function SearchInput({ value, onChange }) {
 
@@ -12,6 +14,10 @@ export default function SearchInput({ value, onChange }) {
   }
 
   return (
-    <input type="search" value={displayValue} onChange={handleChange} />
+    <SearchInputStyle>
+      <input className="input-search"
+       type="search" value={displayValue} onChange={handleChange}/>
+      <FiSearch className="icon-search"/>
+    </SearchInputStyle>
   )
 }
